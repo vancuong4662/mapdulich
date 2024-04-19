@@ -1,0 +1,141 @@
+:root {
+    --color1: #FFFBDA;
+    --color2: #FFEC9E;
+    --color3: #FFBB70;
+    --color4: #ED9455;
+    --text-color1: #000;
+    --text-color2: #fff;
+}
+
+body {
+    background-image: url("imgs/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.map-container {
+    float: right;
+}
+
+.map-container img {
+    width: 100%;
+}
+
+.map-icon {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.map-icon img {
+    transition: 0.5s;
+}
+
+.map-icon:hover img {
+    transform: scale(1.5);
+    transform-origin: center;
+    transition: 0.5s;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 20px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: var(--color1);
+    left: 30px;
+    padding: 0;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+#button-close {
+    color: var(--text-color2);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#button-close:hover,
+#button-close:focus {
+    color: var(--text-color1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: var(--color4);
+    color: var(--text-color2);
+}
+
+.modal-body {
+    padding: 2px 16px;
+    height: 550px;
+    overflow: scroll;
+}
+
+.modal-body img {
+    width: 100%;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    height: 70px;
+    background-color: var(--color4);
+    color: var(--text-color2);
+}
